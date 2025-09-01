@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FindyouTencentLBS'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = '天杀的腾讯不把这个库发布到 cocoapods'
 
 # This description is used to generate tags and improve search results.
