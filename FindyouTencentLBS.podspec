@@ -26,17 +26,12 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/shenxiang11/findyou-tencentLBS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '12.0'
 
   # s.source_files = 'FindyouTencentLBS/**/*.{h,m,c}'
   s.vendored_frameworks = "TencentLBS.xcframework"
-  s.libraries = 'z.1.2.5'
   s.requires_arc = true
-
-  s.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-  }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.swift_version          = '5.0'
   
   # s.resource_bundles = {
   #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
