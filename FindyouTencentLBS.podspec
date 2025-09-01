@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FindyouTencentLBS'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = '天杀的腾讯不把这个库发布到 cocoapods'
 
 # This description is used to generate tags and improve search results.
@@ -32,6 +32,11 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = "TencentLBS.xcframework"
   s.requires_arc = true
   s.swift_version          = '5.0'
+
+  s.pod_target_xcconfig = {
+    'OTHER_LDFLAGS' => '$(inherited) -lc++',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
   
   # s.resource_bundles = {
   #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
